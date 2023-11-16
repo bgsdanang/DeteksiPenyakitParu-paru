@@ -38,7 +38,6 @@ if uploaded_image is not None:
     predicted_class = classes[kelas_prediksi]
 
     st.subheader("Diagnosa:")
-    st.write(f"Penyakit: {predicted_class}")
     st.write(f"Persentase Prediksi: {persentase_prediksi:.2f}%")
 
     # Menampilkan informasi tambahan sesuai dengan kelas prediksi
