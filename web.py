@@ -34,7 +34,7 @@ if uploaded_image is not None:
     
     kelas_prediksi, persentase_prediksi = predict_image(uploaded_image)
     
-    classes = ["COVID19", "NORMAL", "PNEUMONIA", "TURBERCULOSIS"]
+    classes = ["COVID19", "NORMAL", "PNEUMONIA", "TURBERCULOSIS", "Bukan Gambar X-ray Paru"]
     predicted_class = classes[kelas_prediksi]
     st.write(f"Kelas Prediksi: {predicted_class}")
     st.write(f"Persentase Prediksi: {persentase_prediksi:.2f}%")
