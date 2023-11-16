@@ -5,7 +5,7 @@ from tensorflow.keras.preprocessing import image
 import numpy as np
 
 # Load the pre-trained model
-model = keras.models.load_model('model_output.h5')
+model = keras.models.load_model('model_website.h5')
 
 # Function to make predictions
 def predict_image(uploaded_image):
