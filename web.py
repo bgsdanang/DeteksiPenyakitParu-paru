@@ -36,8 +36,27 @@ if uploaded_image is not None:
     
     classes = ["Bukan Gambar X-ray Paru", "COVID19", "NORMAL", "PNEUMONIA", "TURBERCULOSIS"]
     predicted_class = classes[kelas_prediksi]
-    st.write(f"Kelas Prediksi: {predicted_class}")
+
+    st.subheader("Diagnosa:")
+    st.write(f"Penyakit: {predicted_class}")
     st.write(f"Persentase Prediksi: {persentase_prediksi:.2f}%")
+
+    # Menampilkan informasi tambahan sesuai dengan kelas prediksi
+    if kelas_prediksi == 0:
+        st.write("Gambar ini bukan merupakan gambar X-ray paru-paru.")
+    elif kelas_prediksi == 1:
+        st.write("Gambar ini menunjukkan adanya COVID-19.")
+        # Anda dapat menambahkan informasi tambahan untuk kelas ini
+    elif kelas_prediksi == 2:
+        st.write("Gambar ini normal tanpa tanda-tanda penyakit.")
+        # Anda dapat menambahkan informasi tambahan untuk kelas ini
+    elif kelas_prediksi == 3:
+        st.write("Gambar ini menunjukkan tanda-tanda pneumonia.")
+        # Anda dapat menambahkan informasi tambahan untuk kelas ini
+    elif kelas_prediksi == 4:
+        st.write("Gambar ini menunjukkan tanda-tanda tuberkulosis.")
+        # Anda dapat menambahkan informasi tambahan untuk kelas ini
+
 
 # Sidebar
 st.sidebar.title("Tentang Aplikasi")
