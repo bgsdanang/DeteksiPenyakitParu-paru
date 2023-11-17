@@ -30,7 +30,6 @@ uploaded_image = st.file_uploader("Upload Gambar Paru-paru", type=['jpg', 'jpeg'
 if uploaded_image is not None:
     st.image(uploaded_image, caption="Gambar yang Diunggah", use_column_width=True)
     st.write("")
-    st.write("Hasil Prediksi:")
     
     kelas_prediksi, persentase_prediksi = predict_image(uploaded_image)
     
